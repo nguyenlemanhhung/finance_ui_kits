@@ -14,21 +14,21 @@ class SplashContent {
 
 List<SplashContent> splashData = [
   SplashContent(
-    title: 'Manage and Track Your Wallet Easily',
+    title: 'Manage and Track\nYour Wallet Easily',
     subTitle:
-        'Walley makes you easier Manage and set up your personal finances',
+        'Walley makes you easier Manage and\n set up your personal finances',
     image: '/images/splash/splash_1.png',
   ),
   SplashContent(
-    title: 'Manage and Track Your Wallet Easily 2',
+    title: 'Manage and Track\nYour Wallet Easily 2',
     subTitle:
-        'Walley makes you easier Manage and set up your personal finances',
+        'Walley makes you easier Manage and\nset up your personal finances',
     image: '/images/splash/splash_2.png',
   ),
   SplashContent(
-    title: 'Manage and Track Your Wallet Easily 3',
+    title: 'Manage and Track\nYour Wallet Easily 3',
     subTitle:
-        'Walley makes you easier Manage and set up your personal finances',
+        'Walley makes you easier Manage and\nset up your personal finances',
     image: '/images/splash/splash_3.png',
   ),
 ];

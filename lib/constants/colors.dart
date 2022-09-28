@@ -21,12 +21,14 @@ const Color secondaryWhite1 = Color(0xFFEAEAEA);
 const Color secondaryWhite2 = Color(0xFFDFDFDF);
 const Color secondaryWhite3 = Color(0xFFEFF3F8);
 
-const Color secondaryTransparent1 = Color(0xFFEFF3F8);
+const Color secondaryTransparent1 = Color(0xFFd9f2fe);
+const Color secondaryTransparent3 = Color(0xFF4365FF);
 
 const Color backgroundBlack = Color(0xFF1D1E25);
 const Color backgroundBlue = Color(0xFF2E4EE7);
 const Color backgroundWhite = Color(0xFFFBFCFF);
 const Color backgroundGray = Color(0xFFE5E5E5);
+const Color backgroundGlobal = Color(0xFFE5F4FF);
 
 const Color textBlack1 = Color(0x00000000);
 const Color textBlack2 = Color(0x00182046);
@@ -35,3 +37,4 @@ const Color textWhite = Color(0xFFFFFFFF);
 const Color textGray1 = Color(0xFF828FA3);
 const Color textGray2 = Color(0xFF8F939F);
 const Color textGray3 = Color(0xFF848AA4);
+const Color textGray4 = Color(0xFFC4C4C4);
