@@ -21,7 +21,7 @@ class _MainScreenState extends State<MainScreen> {
   List pages = [
     HomePage(),
     StatisticPage(),
-    DeleteWidget(),
+    WalletPage(),
     ProfilePage(),
   ];
   @override
