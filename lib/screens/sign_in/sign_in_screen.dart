@@ -1,4 +1,4 @@
-import 'package:finance_ui_kits/components/blue_button.dart';
+import 'package:finance_ui_kits/components/custom_button.dart';
 import 'package:finance_ui_kits/components/custom_icon_form.dart';
 import 'package:finance_ui_kits/constants/colors.dart';
 import 'package:finance_ui_kits/constants/fonts.dart';

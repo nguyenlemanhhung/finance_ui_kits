@@ -25,15 +25,14 @@ class FormInputConformPW extends StatelessWidget {
         TextFormField(
           keyboardType: TextInputType.visiblePassword,
           decoration: const InputDecoration(
-            // labelText: 'Conform Password',
             hintText: 'Enter your password',
             floatingLabelBehavior: FloatingLabelBehavior.always,
             floatingLabelAlignment: FloatingLabelAlignment.start,
             prefixIcon: CustomIconForm(
-              icon: '/icons/email.png',
+              icon: '/icons/input_auth/lock.png',
             ),
             suffixIcon: CustomIconForm(
-              icon: '/icons/Checklist.png',
+              icon: '/icons/input_auth/Checklist.png',
             ),
           ),
         ),

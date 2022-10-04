@@ -38,7 +38,10 @@ class StatisticPage extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [SummaryCardLeft(), SummaryCardRight()],
+                children: [
+                  SummaryCardLeft(),
+                  SummaryCardRight(),
+                ],
               ),
               const SizedBox(
                 height: 30,

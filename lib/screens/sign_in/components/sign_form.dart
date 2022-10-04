@@ -1,4 +1,4 @@
-import 'package:finance_ui_kits/components/blue_button.dart';
+import 'package:finance_ui_kits/components/custom_button.dart';
 import 'package:finance_ui_kits/components/custom_icon_form.dart';
 import 'package:finance_ui_kits/components/form_input_auth/form_input_email.dart';
 import 'package:finance_ui_kits/components/form_input_auth/form_input_password.dart';
@@ -18,8 +18,8 @@ class SignForm extends StatefulWidget {
 }
 
 class _SignFormState extends State<SignForm> {
-  // final _formKey = GlobalKey<FormState>;
-  final List<String> errors = [];
+  // final _formKey = GlobalKey<FormState>();
+  // final List<String> errors = [];
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -51,9 +51,12 @@ class _SignFormState extends State<SignForm> {
           const SizedBox(
             height: 25,
           ),
-          BlueButton(
+          CustomButton(
             text: 'Log In',
             press: () {},
+            bgColor: mainBlue1,
+            borderRadius: 30,
+            textBtnSize: 20,
           ),
         ],
       ),
@@ -75,19 +78,7 @@ class _SignFormState extends State<SignForm> {
           ),
         ),
         child: Container(
-          child: SplashScreen(),
-          // child: SizedBox(
-          //   height: double.infinity,
-          //   width: double.infinity,
-          //   child: SingleChildScrollView(
-          //     physics: const AlwaysScrollableScrollPhysics(),
-          //     padding: const EdgeInsets.symmetric(
-          //       horizontal: 32,
-          //       vertical: 30,
-          //     ),
-          //     child: SendCodePage(),
-          //   ),
-          // ),
+          child: ForgotPasswordScreen(),
         ),
       ),
     );

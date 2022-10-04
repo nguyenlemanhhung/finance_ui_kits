@@ -25,16 +25,9 @@ class ProfileInputName extends StatelessWidget {
         TextFormField(
           keyboardType: TextInputType.visiblePassword,
           decoration: const InputDecoration(
-            // labelText: 'Password',
-            // hintText: 'Enter your email',
+            hintText: 'Enter your full name',
             floatingLabelBehavior: FloatingLabelBehavior.always,
             floatingLabelAlignment: FloatingLabelAlignment.start,
-            // prefixIcon: CustomIconForm(
-            //   icon: '/icons/email.png',
-            // ),
-            // suffixIcon: CustomIconForm(
-            //   icon: '/icons/Checklist.png',
-            // ),
           ),
         ),
       ],

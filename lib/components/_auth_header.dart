@@ -17,7 +17,7 @@ class AuthHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Image.asset(
-          'assets/icons/logo.png',
+          '/images/Logo.png',
           width: 76,
           height: 76,
         ),

@@ -1,6 +1,9 @@
 import 'package:finance_ui_kits/constants/colors.dart';
 import 'package:finance_ui_kits/constants/fonts.dart';
 import 'package:finance_ui_kits/screens/feature_bill/feature_bill_screen.dart';
+import 'package:finance_ui_kits/screens/feature_request/feature_request_page.dart';
+import 'package:finance_ui_kits/screens/feature_topup/feature_topup_page.dart';
+import 'package:finance_ui_kits/screens/feature_transfer/feature_select_card.dart';
 import 'package:flutter/material.dart';
 
 class Features extends StatelessWidget {
@@ -39,21 +42,22 @@ class Features extends StatelessWidget {
                   icon: '/icons/feature/transfer.png',
                   text: 'Transfer',
                   press: () {
-                    // Navigator.pushNamed(context, FeatureBillScreen.routeName);
+                    Navigator.pushNamed(context, FeatureSelectCard.routeName);
                   },
                 ),
                 FeatureCard(
                   icon: "/icons/feature/request.png",
                   text: 'Request',
                   press: () {
-                    // Navigator.pushNamed(context, FeatureBillScreen.routeName);
+                    Navigator.pushNamed(
+                        context, FeatureRequestScreen.routeName);
                   },
                 ),
                 FeatureCard(
-                  icon: "/icons/feature/request.png",
+                  icon: "/icons/feature/top_up.png",
                   text: 'Top Up',
                   press: () {
-                    // Navigator.pushNamed(context, FeatureBillScreen.routeName);
+                    Navigator.pushNamed(context, FeatureTopupScreen.routeName);
                   },
                 ),
                 FeatureCard(

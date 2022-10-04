@@ -1,4 +1,4 @@
-import 'package:finance_ui_kits/components/blue_button.dart';
+import 'package:finance_ui_kits/components/custom_button.dart';
 import 'package:finance_ui_kits/constants/colors.dart';
 import 'package:finance_ui_kits/constants/fonts.dart';
 import 'package:finance_ui_kits/screens/forgot_password/components/enter_code_page.dart';
@@ -19,23 +19,23 @@ class ForgotPasswordScreen extends StatefulWidget {
 class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   @override
   Widget build(BuildContext context) {
-    return SendCodePage();
-    // return Scaffold(
-    //   body: SafeArea(
-    //     child: SendCodePage(),
-    // child: SizedBox(
-    //   height: double.infinity,
-    //   width: double.infinity,
-    //   child: SingleChildScrollView(
-    //     physics: const AlwaysScrollableScrollPhysics(),
-    //     padding: const EdgeInsets.symmetric(
-    //       horizontal: 32,
-    //       vertical: 30,
-    //     ),
-    //     child: SendCodePage(),
-    //   ),
-    // ),
-    // ),
-    // );
+    // return SendCodePage();
+    return Scaffold(
+      body: SafeArea(
+        // child: SendCodePage(),
+        child: SizedBox(
+          height: double.infinity,
+          width: double.infinity,
+          child: SingleChildScrollView(
+            physics: const AlwaysScrollableScrollPhysics(),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 32,
+              vertical: 30,
+            ),
+            child: SendCodePage(),
+          ),
+        ),
+      ),
+    );
   }
 }

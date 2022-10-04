@@ -23,17 +23,24 @@ class FormInputEmail extends StatelessWidget {
           height: 10,
         ),
         TextFormField(
+          // validator: (value) {
+          //   if (value.isEmpty) {
+          //     setState(() {
+          //       errors.add("Please enter your email")
+          //     });
+          //   }
+          //   return null;
+          // },
           keyboardType: TextInputType.visiblePassword,
           decoration: const InputDecoration(
-            // labelText: 'Password',
             hintText: 'Enter your email',
             floatingLabelBehavior: FloatingLabelBehavior.always,
             floatingLabelAlignment: FloatingLabelAlignment.start,
             prefixIcon: CustomIconForm(
-              icon: '/icons/email.png',
+              icon: '/icons/input_auth/email.png',
             ),
             suffixIcon: CustomIconForm(
-              icon: '/icons/Checklist.png',
+              icon: '/icons/input_auth/Checklist.png',
             ),
           ),
         ),

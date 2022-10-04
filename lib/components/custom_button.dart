@@ -4,27 +4,34 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class BlueButton extends StatelessWidget {
-  const BlueButton({super.key, required this.text, required this.press});
+class CustomButton extends StatelessWidget {
+  const CustomButton(
+      {super.key,
+      required this.text,
+      required this.press,
+      required this.bgColor,
+      required this.borderRadius,
+      required this.textBtnSize});
   final String text;
+  final Color bgColor;
+  final double borderRadius, textBtnSize;
   final VoidCallback press;
   @override
   Widget build(BuildContext context) {
     return Container(
-      // padding: EdgeInsets.symmetric(vertical: 10),
       width: double.infinity,
       child: MaterialButton(
         elevation: 0,
         padding: EdgeInsets.all(20),
-        color: mainBlue1,
+        color: bgColor,
         child: Text(
           text,
-          style: PrimaryFont.bold600(20).copyWith(
+          style: PrimaryFont.bold600(textBtnSize).copyWith(
             color: backgroundWhite,
           ),
         ),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(25.0),
+          borderRadius: BorderRadius.circular(borderRadius),
         ),
         onPressed: press,
       ),

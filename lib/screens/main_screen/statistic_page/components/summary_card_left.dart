@@ -10,48 +10,105 @@ class SummaryCardLeft extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        ClippathCustom(
-          width: 194,
-          height: 160,
-          backgroundColor: mainBlue1,
+    return Container(
+      padding: EdgeInsets.only(
+        // right: 22,
+        left: 16,
+      ),
+      width: 194,
+      height: 160,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('/images/statistic/purple_card.png'),
+          fit: BoxFit.cover,
         ),
-        Positioned(
-          top: 22,
-          left: 16,
-          child: Column(
-            children: [
-              Text(
-                'Make Finance',
-                style: PrimaryFont.bold700(20).copyWith(
-                  color: backgroundWhite,
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                'More Efficient',
-                style: PrimaryFont.bold700(20).copyWith(
-                  color: backgroundWhite,
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              GestureDetector(
-                onTap: () {},
-                child: ClippathCustom(
-                  width: 117,
-                  height: 46,
-                  backgroundColor: mainCyan3,
-                ),
-              ),
-            ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Make Finance',
+            style: PrimaryFont.bold700(20).copyWith(
+              color: backgroundWhite,
+            ),
           ),
-        ),
-      ],
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            'More Efficient',
+            style: PrimaryFont.bold700(20).copyWith(
+              color: backgroundWhite,
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            width: 117,
+            height: 46,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('/images/statistic/clippath_button.png'),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: TextButton(
+              onPressed: () {},
+              child: Text(
+                'See All',
+                style: PrimaryFont.bold600(16).copyWith(
+                  color: backgroundWhite,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
+    // return Stack(
+    //   children: [
+    //     ClippathCustom(
+    //       width: 194,
+    //       height: 160,
+    //       backgroundColor: mainBlue1,
+    //     ),
+    //     Positioned(
+    //       top: 22,
+    //       left: 16,
+    //       child: Column(
+    //         children: [
+    //           Text(
+    //             'Make Finance',
+    //             style: PrimaryFont.bold700(20).copyWith(
+    //               color: backgroundWhite,
+    //             ),
+    //           ),
+    //           SizedBox(
+    //             height: 10,
+    //           ),
+    //           Text(
+    //             'More Efficient',
+    //             style: PrimaryFont.bold700(20).copyWith(
+    //               color: backgroundWhite,
+    //             ),
+    //           ),
+    //           SizedBox(
+    //             height: 20,
+    //           ),
+    //           GestureDetector(
+    //             onTap: () {},
+    //             child: ClippathCustom(
+    //               width: 117,
+    //               height: 46,
+    //               backgroundColor: mainCyan3,
+    //             ),
+    //           ),
+    //         ],
+    //       ),
+    //     ),
+    //   ],
+    // );
   }
 }

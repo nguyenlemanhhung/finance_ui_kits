@@ -1,4 +1,4 @@
-import 'package:finance_ui_kits/components/blue_button.dart';
+import 'package:finance_ui_kits/components/custom_button.dart';
 import 'package:finance_ui_kits/components/custom_icon_form.dart';
 import 'package:finance_ui_kits/components/form_input_auth/form_input_conformpw.dart';
 import 'package:finance_ui_kits/components/form_input_auth/form_input_email.dart';
@@ -46,11 +46,14 @@ class _SignUpFormState extends State<SignUpForm> {
           const SizedBox(
             height: 25,
           ),
-          BlueButton(
-            text: 'Logn Up',
+          CustomButton(
+            text: 'Sign Up',
             press: () {
               Navigator.pushNamed(context, SetupProfileScreen.routeName);
             },
+            bgColor: mainBlue1,
+            borderRadius: 30,
+            textBtnSize: 20,
           ),
         ],
       ),

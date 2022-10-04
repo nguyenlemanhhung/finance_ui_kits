@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:finance_ui_kits/constants/colors.dart';
 import 'package:finance_ui_kits/routs.dart';
 import 'package:finance_ui_kits/screens/main_screen/main_screen.dart';
@@ -6,10 +7,16 @@ import 'package:finance_ui_kits/screens/setup_profile_screen/setup_profile_scree
 import 'package:finance_ui_kits/screens/sign_up/sign_up_screen.dart';
 import 'package:finance_ui_kits/screens/splash/splash_screen.dart';
 import 'package:finance_ui_kits/theme.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context) => MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -19,10 +26,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       title: 'Finance Kits',
       theme: theme(),
-      initialRoute: MainScreen.routeName,
+      initialRoute: SplashScreen.routeName,
       routes: routes,
     );
   }

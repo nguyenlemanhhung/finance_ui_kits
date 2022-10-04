@@ -31,49 +31,62 @@ class ActivityCard extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-            decoration: BoxDecoration(
-              color: backgroundWhite,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      '/icons/bank_logo.png',
-                      height: 54,
-                      width: 54,
+          ActivityCardItem(),
+          ActivityCardItem(),
+        ],
+      ),
+    );
+  }
+}
+
+class ActivityCardItem extends StatelessWidget {
+  const ActivityCardItem({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
+      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+      decoration: BoxDecoration(
+        color: backgroundWhite,
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                '/icons/bank_logo.png',
+                height: 54,
+                width: 54,
+              ),
+              Column(
+                children: [
+                  Text(
+                    'Paypal Income',
+                    style: PrimaryFont.medium500(14).copyWith(
+                      color: textBlack3,
                     ),
-                    Column(
-                      children: [
-                        Text(
-                          'Paypal Income',
-                          style: PrimaryFont.medium500(14).copyWith(
-                            color: textBlack3,
-                          ),
-                        ),
-                        Text(
-                          'Today',
-                          style: PrimaryFont.regular400(11).copyWith(
-                            color: textGray2,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Text(
-                  '+Rp.500k',
-                  style: PrimaryFont.bold600(16).copyWith(
-                    color: mainBlue1,
                   ),
-                ),
-              ],
+                  Text(
+                    'Today',
+                    style: PrimaryFont.regular400(11).copyWith(
+                      color: textGray2,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          Text(
+            '+Rp.500k',
+            style: PrimaryFont.bold600(16).copyWith(
+              color: mainBlue1,
             ),
           ),
         ],

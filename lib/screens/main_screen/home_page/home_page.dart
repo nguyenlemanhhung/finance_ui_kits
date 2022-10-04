@@ -22,31 +22,7 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 28,
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 31),
-                child: Row(
-                  children: [
-                    BankCard(
-                      text: 'card 1',
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                    BankCard(
-                      text: 'card 2',
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                    BankCard(
-                      text: 'card 3',
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            BankCard(),
             const SizedBox(
               height: 23,
             ),

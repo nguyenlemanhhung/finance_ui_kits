@@ -1,12 +1,10 @@
-import 'package:finance_ui_kits/constants/colors.dart';
-import 'package:finance_ui_kits/constants/fonts.dart';
-import 'package:finance_ui_kits/model/splash_data.dart';
-import 'package:finance_ui_kits/screens/sign_in/sign_in_screen.dart';
+import '../../components/custom_button.dart';
+import '../../constants/colors.dart';
+import '../../constants/fonts.dart';
+import '../../constants/size_configs.dart';
+import '../../model/splash_data.dart';
+import '../sign_in/sign_in_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
-import '../../components/cyan_button.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -36,8 +34,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+
     return Scaffold(
-      backgroundColor: mainBlue1,
+      backgroundColor: backgroundBlue,
       body: SafeArea(
         child: SizedBox(
           width: double.infinity,
@@ -51,85 +51,96 @@ class _SplashScreenState extends State<SplashScreen> {
             itemCount: splashData.length,
             itemBuilder: (context, index) => Column(
               children: [
-                Expanded(
-                  flex: 3,
-                  child: Stack(
-                    children: <Widget>[
-                      Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(120),
-                                topRight: Radius.circular(120),
-                              ),
-                              color: Colors.white.withOpacity(0.1)),
-                          height: 320,
-                          width: 250,
-                        ),
-                      ),
-                      Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Image.asset(splashData[index].image),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(60),
-                        topRight: Radius.circular(60),
-                      ),
-                      color: Colors.white,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 32),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text(
-                            splashData[index].title,
-                            textAlign: TextAlign.center,
-                            style: PrimaryFont.bold700(28),
-                          ),
-                          Text(
-                            splashData[index].subTitle,
-                            textAlign: TextAlign.center,
-                            style: PrimaryFont.medium500(16),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: List.generate(
-                              splashData.length,
-                              (index) => dotIndicator(index),
-                            ),
-                          ),
-                          CyanButton(
-                            text: 'Next',
-                            press: () {
-                              currentPage == splashData.length - 1
-                                  ? Navigator.pushNamed(
-                                      context, SignInScreen.routeName)
-                                  : _pageController.nextPage(
-                                      duration: Duration(
-                                        microseconds: 400,
-                                      ),
-                                      curve: Curves.easeInOut,
-                                    );
-                            },
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+                buildImageSplash(index),
+                buildTextSplash(index, context),
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Expanded buildTextSplash(int index, BuildContext context) {
+    return Expanded(
+      flex: 2,
+      child: Container(
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(55),
+            topRight: Radius.circular(55),
+          ),
+          color: Colors.white,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 32),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                splashData[index].title,
+                textAlign: TextAlign.center,
+                style: PrimaryFont.bold700(28),
+              ),
+              Text(
+                splashData[index].subTitle,
+                textAlign: TextAlign.center,
+                style: PrimaryFont.medium500(16),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  splashData.length,
+                  (index) => dotIndicator(index),
+                ),
+              ),
+              CustomButton(
+                text: 'Next',
+                textBtnSize: 22,
+                bgColor: mainCyan2,
+                borderRadius: 40,
+                press: () {
+                  currentPage == splashData.length - 1
+                      ? Navigator.pushNamed(context, SignInScreen.routeName)
+                      : _pageController.nextPage(
+                          duration: Duration(
+                            microseconds: 400,
+                          ),
+                          curve: Curves.easeInOut,
+                        );
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Expanded buildImageSplash(int index) {
+    return Expanded(
+      flex: 3,
+      child: Stack(
+        alignment: Alignment.center,
+        children: <Widget>[
+          Positioned(
+            bottom: -20,
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(140),
+                    topRight: Radius.circular(140),
+                  ),
+                  color: Colors.white.withOpacity(0.2)),
+              height: 400,
+              width: 320,
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Image.asset(splashData[index].image),
+          ),
+        ],
       ),
     );
   }

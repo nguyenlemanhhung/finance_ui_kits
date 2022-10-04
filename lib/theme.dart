@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 ThemeData theme() {
   return ThemeData(
     fontFamily: 'Poppins',
+    scaffoldBackgroundColor: backgroundWhite,
     appBarTheme: const AppBarTheme(
-      color: backgroundGray,
+      color: backgroundWhite,
       elevation: 0,
       brightness: Brightness.light,
       iconTheme: IconThemeData(

@@ -1,8 +1,10 @@
-import 'package:finance_ui_kits/components/blue_button.dart';
+import 'package:finance_ui_kits/components/custom_button.dart';
+import 'package:finance_ui_kits/components/form_setup_profile/form_dropdown.dart';
 import 'package:finance_ui_kits/components/form_setup_profile/profile_input_contact.dart';
 import 'package:finance_ui_kits/components/form_setup_profile/profile_input_dob.dart';
 import 'package:finance_ui_kits/components/form_setup_profile/profile_input_gender.dart';
 import 'package:finance_ui_kits/components/form_setup_profile/profile_input_name.dart';
+import 'package:finance_ui_kits/constants/colors.dart';
 import 'package:finance_ui_kits/screens/main_screen/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -37,15 +39,18 @@ class _SetupProfileFormState extends State<SetupProfileForm> {
           const SizedBox(
             height: 20,
           ),
-          ProfileInputGender(),
+          InputDropdown(),
           const SizedBox(
             height: 30,
           ),
-          BlueButton(
+          CustomButton(
             text: 'Continue',
             press: () {
               Navigator.pushNamed(context, MainScreen.routeName);
             },
+            bgColor: mainBlue1,
+            borderRadius: 30,
+            textBtnSize: 20,
           ),
         ],
       ),

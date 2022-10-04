@@ -1,4 +1,4 @@
-import 'package:finance_ui_kits/components/blue_button.dart';
+import 'package:finance_ui_kits/components/custom_button.dart';
 import 'package:finance_ui_kits/constants/colors.dart';
 import 'package:finance_ui_kits/constants/fonts.dart';
 import 'package:flutter/material.dart';
@@ -61,12 +61,12 @@ class _EnterCodePageState extends State<EnterCodePage> {
               const SizedBox(
                 height: 25,
               ),
-              BlueButton(
+              CustomButton(
                 text: 'Continue',
-                press: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => EnterCodePage()));
-                },
+                press: () {},
+                bgColor: mainBlue1,
+                borderRadius: 30,
+                textBtnSize: 20,
               ),
             ],
           ),

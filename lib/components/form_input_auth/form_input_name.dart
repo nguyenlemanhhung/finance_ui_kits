@@ -25,15 +25,14 @@ class FormInputName extends StatelessWidget {
         TextFormField(
           keyboardType: TextInputType.visiblePassword,
           decoration: const InputDecoration(
-            // labelText: 'Password',
             hintText: 'Enter your name',
             floatingLabelBehavior: FloatingLabelBehavior.always,
             floatingLabelAlignment: FloatingLabelAlignment.start,
             prefixIcon: CustomIconForm(
-              icon: '/icons/email.png',
+              icon: '/icons/input_auth/Profile.png',
             ),
             suffixIcon: CustomIconForm(
-              icon: '/icons/Checklist.png',
+              icon: '/icons/input_auth/Checklist.png',
             ),
           ),
         ),

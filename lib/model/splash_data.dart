@@ -20,13 +20,13 @@ List<SplashContent> splashData = [
     image: '/images/splash/splash_1.png',
   ),
   SplashContent(
-    title: 'Manage and Track\nYour Wallet Easily 2',
+    title: 'Manage and Track\nYour Wallet Easily',
     subTitle:
         'Walley makes you easier Manage and\nset up your personal finances',
     image: '/images/splash/splash_2.png',
   ),
   SplashContent(
-    title: 'Manage and Track\nYour Wallet Easily 3',
+    title: 'Manage and Track\nYour Wallet Easily',
     subTitle:
         'Walley makes you easier Manage and\nset up your personal finances',
     image: '/images/splash/splash_3.png',
